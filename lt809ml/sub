@@ -7,7 +7,7 @@ yum update || apt update
 yum install wget nginx -y || apt install wget nginx -y
 fi
 spip=$(curl -s ifconfig.me)
-spport="443"
+spport="13445"
 s=$(echo $(($(cat /usr/local/x-ui/bin/config.json | grep -o "port.*" | grep -n "443" | cut -c 1)-1)))
 id=$(cat /usr/local/x-ui/bin/config.json | grep -o '"id".*' | sed -n "$s"p | cut -d '"' -f4)
 fakeid=$(echo $RANDOM | md5sum | cut -c 1-22)
