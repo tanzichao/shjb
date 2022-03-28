@@ -8,7 +8,7 @@ yum install wget nginx -y || apt install wget nginx -y
 fi
 spip="aws-v0.heimayun.me"
 spport="13445"
-s=$(echo $(($(cat /usr/local/x-ui/bin/config.json | grep -o "port.*" | grep -n "13445" | cut -c 1)-1)))
+s=$(echo $(($(cat /usr/local/x-ui/bin/config.json | grep -o "port.*" | grep -n "443" | cut -c 1)-1)))
 id=$(cat /usr/local/x-ui/bin/config.json | grep -o '"id".*' | sed -n "$s"p | cut -d '"' -f4)
 fakeid=$(echo $RANDOM | md5sum | cut -c 1-22)
 md5="3d99ff138e1f41e931e58617e7d128e2"
